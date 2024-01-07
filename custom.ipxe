@@ -3,10 +3,13 @@
 ### netboot.xyz-custom menu
 ###
 
-:start
-echo Hello world!
-sleep 10
-goto custom_exit
+:custom
+clear custom_choice
+menu This is a test menu
+
+:option_one
+kernal https://http.kali.org/kali/dists/kali-rolling/main/installer-amd64/current/images/netboot/netboot.tar.gz
+boot || goto custom_exit
 
 :custom_exit
 exit 0
